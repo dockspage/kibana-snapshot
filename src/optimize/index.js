@@ -54,7 +54,8 @@ exports.default = async (kbnServer, server, config) => {
   }));
 
   // in prod, only bundle when something is missing or invalid
-  const reuseCache = config.get('optimize.useBundleCache') ? await uiBundles.areAllBundleCachesValid() : false;
+  const reuseCache = true
+  //config.get('optimize.useBundleCache') ? await uiBundles.areAllBundleCachesValid() : false;
 
   // we might not have any work to do
   if (reuseCache) {
