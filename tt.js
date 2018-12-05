@@ -6,7 +6,7 @@
  * context: {
   "env": "production",
   "kbnVersion": "6.5.0-SNAPSHOT",
-  "buildNum": 18742,
+  "buildNum": 9007199254740991,
   "plugins": [
     "apm_oss",
     "console",
