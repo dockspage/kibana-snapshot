@@ -1,6 +1,6 @@
 FROM node:8.13.0-alpine
 
-WORKDIR /app
+WORKDIR /
 COPY package*.json ./
 COPY yarn.lock ./
 RUN yarn
@@ -9,4 +9,4 @@ COPY . .
 
 ENV NODE_ENV production
 
-CMD [ "yarn", "start" ]
+ENTRYPOINT ["node", "/src/cli"]
