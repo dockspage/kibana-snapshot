@@ -9,4 +9,4 @@ COPY . .
 
 ENV NODE_ENV production
 
-ENTRYPOINT ["node", "/src/cli"]
+ENTRYPOINT ["node", "src/cli"]
