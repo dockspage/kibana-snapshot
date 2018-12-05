@@ -105,7 +105,9 @@ class UiBundle {
    * this method and bundles are always recreated.
    */
   async isCacheValid() {
-    if ((await this.readEntryFile()) !== this.renderContent()) {
+    const re = await this.readEntryFile()
+    const r = this.renderContent()
+    if (re !== r) {
       return false;
     }
 
