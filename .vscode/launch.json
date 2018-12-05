@@ -20,7 +20,7 @@
       "request": "launch",
       "name": "Launch Scripts",
       "program": "${workspaceFolder}/s/index.js",
-      "args": ["s/s2"],
+      "args": ["s/kibana-plugin"],
       "skipFiles": [
         "<node_internals>/**/*.js"
       ],
