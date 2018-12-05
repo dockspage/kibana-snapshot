@@ -20,3 +20,14 @@
  */
 
 require('./cli');
+const idioCore = require('@idio/core')
+const proxy = require('koa-proxy');
+
+(async () => {
+  const port = process.env.PORT || 5000
+  const { app, url } = await idioCore({}, { port })
+  console.log('Proxy started on %s', url)
+  app.use(proxy({
+    host: 'http://localhost:5601',
+  }))
+})()
