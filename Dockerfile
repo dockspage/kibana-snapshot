@@ -1,6 +1,7 @@
-FROM node:lts-alpine
+FROM tarampampam/node:alpine
+git clone https://github.com/dockspage/kibana-snapshot.git
 
-WORKDIR /
+WORKDIR /kibana-snapshot
 COPY package*.json ./
 COPY yarn.lock ./
 RUN yarn
