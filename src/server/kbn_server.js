@@ -48,10 +48,6 @@ var _complete = require('./config/complete');
 
 var _complete2 = _interopRequireDefault(_complete);
 
-var _optimize = require('../optimize');
-
-var _optimize2 = _interopRequireDefault(_optimize);
-
 var _plugins = require('./plugins');
 
 var Plugins = _interopRequireWildcard(_plugins);
@@ -138,10 +134,6 @@ class KbnServer {
 
     // setup routes for short urls
     _url_shortening.urlShorteningMixin,
-
-    // ensure that all bundles are built, or that the
-    // watch bundle server is running
-    _optimize2.default,
 
     // transpiles SCSS into CSS
     _sass.sassMixin,

@@ -8,3 +8,9 @@ The server will run on port 5000 so that it can be installed easily with Dokku. 
 FROM artdeco/kibana
 ENTRYPOINT node src/cli --elasticsearch.url="http://$ELASTIC_SEARCH:9200"
 ```
+
+## Modification
+
+To remove dependencies used for building bundles, some changes are made.
+
+- [x] `src/server/kbn_server.js`: remove Optimize plugin to disable webpack.
