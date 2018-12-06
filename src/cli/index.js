@@ -36,6 +36,7 @@ const PROD = process.env.NODE_ENV != 'production'
     static: {
       root: 'static',
       mount: '/auth',
+      maxage: PROD ? 1000 * 60 * 60 * 24 : null,
     },
     async checkSession(ctx, next) {
       if (!PROD || ctx.path.startsWith('/auth')) await next()
