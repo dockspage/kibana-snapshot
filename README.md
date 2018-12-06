@@ -15,7 +15,7 @@ artdeco/kibana:6.5.0 289MB
 
 The server will run on port 5000 so that it can be installed easily with Dokku. The `ELASTIC_SEARCH` and `PASSWORD` environment variables need to be set on the container.
 
-![demo.gif](doc/demo.gif)
+![demo.gif](doc/demo2.gif)
 
 ```docker
 FROM artdeco/kibana

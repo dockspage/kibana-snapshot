@@ -75,6 +75,14 @@
   version "0.0.0"
   uid ""
 
+"@rqt/aqt@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@rqt/aqt/-/aqt-1.1.3.tgz#a0acb5eeded94d5063c0fc7d734db7d917835b37"
+  integrity sha512-edcE80Ze6ZD5PGULqij7PNh1F6yH+BUNuWUISK88vG7u0skVPs1eMazGLunkPJ7/Q6+U2sx5z3TwEcKDCfPQVg==
+  dependencies:
+    catchment "3.1.1"
+    erotic "2.0.1"
+
 "@types/accepts@*":
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/@types/accepts/-/accepts-1.3.5.tgz#c34bec115cfc746e04fe5a059df4ce7e7b391575"
@@ -1098,10 +1106,23 @@ dicer@0.2.5:
     readable-stream "1.1.x"
     streamsearch "0.1.2"
 
+docopt@~0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/docopt/-/docopt-0.6.2.tgz#b28e9e2220da5ec49f7ea5bb24a47787405eeb11"
+  integrity sha1-so6eIiDaXsSffqW7JKR3h0Be6xE=
+
 doctypes@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/doctypes/-/doctypes-1.1.0.tgz#ea80b106a87538774e8a3a4a5afe293de489e0a9"
   integrity sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=
+
+dot-json@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/dot-json/-/dot-json-1.0.4.tgz#b5c5818eb526a7917ac02df017fe9fba37b11195"
+  integrity sha1-tcWBjrUmp5F6wC3wF/6fujexEZU=
+  dependencies:
+    docopt "~0.6.2"
+    underscore-keypath "~0.0.22"
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
@@ -2211,7 +2232,7 @@ lodash.assign@^4.2.0:
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
   integrity sha1-DZnzzNem0mHRm9rrkkUAXShYCOc=
 
-lodash.clonedeep@^4.3.2:
+lodash.clonedeep@^4.3.2, lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
@@ -3119,6 +3140,13 @@ rndm@1.2.0:
   resolved "https://registry.yarnpkg.com/rndm/-/rndm-1.2.0.tgz#f33fe9cfb52bbfd520aa18323bc65db110a1b76c"
   integrity sha1-8z/pz7Urv9UgqhgyO8ZdsRCht2w=
 
+rqt@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rqt/-/rqt-3.0.1.tgz#bf2569f69af0415eafb30ac67f1014fa88a83195"
+  integrity sha512-7IJgyhAVqctLLsRuvkY1iC6cp2B2w/YpbHmuIe50195fZNcJBt05FcafDjOuNraLe0T8cjrWBE2pBGcw7noPXw==
+  dependencies:
+    "@rqt/aqt" "1.1.3"
+
 rxjs@^6.2.1:
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
@@ -3602,6 +3630,18 @@ uid-safe@^2.1.3:
   dependencies:
     random-bytes "~1.0.0"
 
+underscore-keypath@~0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/underscore-keypath/-/underscore-keypath-0.0.22.tgz#48a528392bb6efc424be1caa56da4b5faccf264d"
+  integrity sha1-SKUoOSu278QkvhyqVtpLX6zPJk0=
+  dependencies:
+    underscore "*"
+
+underscore@*:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.1.tgz#06dce34a0e68a7babc29b365b8e74b8925203961"
+  integrity sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==
+
 unpipe@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
@@ -3618,6 +3658,14 @@ urijs@^1.19.0:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.1.tgz#5b0ff530c0cbde8386f6342235ba5ca6e995d25a"
   integrity sha512-xVrGVi94ueCJNrBSTjWqjvtgvl3cyOTThp2zaMaFNGp3F542TR6sM3f2o8RqZl+AwteClSVmoCyt0ka4RjQOQg==
+
+user-agents@1.0.97:
+  version "1.0.97"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.97.tgz#fa186e90c7a31297dc4d39df93181c6a238ec22e"
+  integrity sha512-OGErZCTSSJRxP+3xrNM1Tcw+P5OgZgeKIS/adxLCqDcDH+OZjN9ankhiPaO49QzmFN2kpBIZsigrV2QbYAswYw==
+  dependencies:
+    dot-json "^1.0.4"
+    lodash.clonedeep "^4.5.0"
 
 usually@1.0.0:
   version "1.0.0"
