@@ -239,7 +239,7 @@
 }
 .global-nav .logo-small.kibana,
 .global-nav .logo.kibana {
-  background-image: url(__REPLACE_WITH_PUBLIC_PATH__fa0bbd682c66f1187d48f74b33b5bbd0.svg);
+  background-image: url(fa0bbd682c66f1187d48f74b33b5bbd0.svg);
   background-position: 10px 14px;
   background-size: 120px 42px;
   background-repeat: no-repeat;
@@ -6937,8 +6937,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(__REPLACE_WITH_PUBLIC_PATH__45c73723862c6fc5eb3d6961db2d71fb.eot);
-  src: url(__REPLACE_WITH_PUBLIC_PATH__45c73723862c6fc5eb3d6961db2d71fb.eot?#iefix&v=4.4.0) format('embedded-opentype'), url(__REPLACE_WITH_PUBLIC_PATH__4b5a84aaf1c9485e060c503a0ff8cadb.woff2) format('woff2'), url(__REPLACE_WITH_PUBLIC_PATH__dfb02f8f6d0cedc009ee5887cc68f1f3.woff) format('woff'), url(__REPLACE_WITH_PUBLIC_PATH__7c87870ab40d63cfb8870c1f183f9939.ttf) format('truetype'), url(__REPLACE_WITH_PUBLIC_PATH__76a4f23c6be74fd309e0d0fd2c27a5de.svg#fontawesomeregular) format('svg');
+  src: url(45c73723862c6fc5eb3d6961db2d71fb.eot);
+  src: url(45c73723862c6fc5eb3d6961db2d71fb.eot?#iefix&v=4.4.0) format('embedded-opentype'), url(4b5a84aaf1c9485e060c503a0ff8cadb.woff2) format('woff2'), url(dfb02f8f6d0cedc009ee5887cc68f1f3.woff) format('woff'), url(7c87870ab40d63cfb8870c1f183f9939.ttf) format('truetype'), url(76a4f23c6be74fd309e0d0fd2c27a5de.svg#fontawesomeregular) format('svg');
   font-weight: normal;
   font-style: normal;
 }
