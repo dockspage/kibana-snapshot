@@ -1,13 +1,9 @@
-FROM tarampampam/node:alpine
-git clone https://github.com/dockspage/kibana-snapshot.git
+FROM node:alpine
+RUN wget -qO- https://github.com/dockspage/kibana-snapshot/archive/v1.2.tar.gz | tar xvz
 
-WORKDIR /kibana-snapshot
-COPY package*.json ./
-COPY yarn.lock ./
+WORKDIR /kibana-snapshot-1.2
 RUN yarn
-
-COPY . .
 
 ENV NODE_ENV production
 
-ENTRYPOINT ["node", "src/cli"]
+ENTRYPOINT node src/cli --elasticsearch.url="http://$ELASTIC_SEARCH:9200"
