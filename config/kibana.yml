@@ -100,7 +100,7 @@ elasticsearch.url: "https://logs.docks.page"
 #logging.silent: false
 
 # Set the value of this setting to true to suppress all logging output other than error messages.
-logging.quiet: true
+# logging.quiet: false
 
 # Set the value of this setting to true to log all events, including system usage information
 # and all requests.

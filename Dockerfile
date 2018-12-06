@@ -6,4 +6,4 @@ RUN yarn
 
 ENV NODE_ENV production
 
-ENTRYPOINT node src/cli --elasticsearch.url="http://$ELASTIC_SEARCH:9200"
+ENTRYPOINT node src/cli -e http://$ELASTIC_SEARCH:9200 -q
