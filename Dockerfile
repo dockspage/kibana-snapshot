@@ -1,9 +1,9 @@
 FROM node:alpine
-RUN wget -qO- https://github.com/dockspage/kibana-snapshot/archive/v1.5.tar.gz | tar xvz
+RUN wget -qO- https://github.com/dockspage/kibana-snapshot/archive/v1.6.tar.gz | tar xvz
 
-WORKDIR /kibana-snapshot-1.5
+WORKDIR /kibana-snapshot-1.6
 RUN yarn
 
 ENV NODE_ENV production
 
-ENTRYPOINT node src/cli -e http://$ELASTIC_SEARCH:9200 -q
+ENTRYPOINT node src/cli -e http://$ELASTIC_SEARCH:9200
