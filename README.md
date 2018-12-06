@@ -26,6 +26,7 @@ ENTRYPOINT node src/cli -e="http://$ELASTIC_SEARCH:9200"
 
 To remove dependencies used for building bundles, some changes are made.
 
+- [x] `src/optimize/index.js#L57`: set `reuseCache` to true to prevent cache building.
 - [x] `src/server/kbn_server.js`: remove Optimize plugin to disable webpack. Comment out https://github.com/elastic/kibana/blob/v6.5.0/src/optimize/base_optimizer.js dependency. Since webpack is removed, our proxy will serve the optimized bundles as well.
 - [x] `src/cli/index.js`: Start the proxy server on 5000 beforehand (implemented in `lib-src/proxy-server.js` to serve optimized bundles and provide Kibana proxy with authorization via the `PASSWORD` environment variable).
 - [x] files in `optimize`: replace `__REPLACE_WITH_PUBLIC_PATH__` with `''`.
