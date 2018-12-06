@@ -1,7 +1,7 @@
 FROM node:alpine
-RUN wget -qO- https://github.com/dockspage/kibana-snapshot/archive/v1.2.tar.gz | tar xvz
+RUN wget -qO- https://github.com/dockspage/kibana-snapshot/archive/v1.3.tar.gz | tar xvz
 
-WORKDIR /kibana-snapshot-1.2
+WORKDIR /kibana-snapshot-1.3
 RUN yarn
 
 ENV NODE_ENV production
