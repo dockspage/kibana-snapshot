@@ -2,6 +2,12 @@
 
 This Kibana is a stripped-down version of OSS version of Kibana downloaded as a snapshot. It does not have Webpack and Babel and has only those dependencies that are used to start the server. It also adds a proxy server to enable authorization via password.
 
+```
+38 modules required to run Kibana
+ DOWN FROM
+293 all modules
+```
+
 The server will run on port 5000 so that it can be installed easily with Dokku. The `ELASTIC_SEARCH` and `PASSWORD` environment variables need to be set on the container.
 
 ```docker
