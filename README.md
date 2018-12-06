@@ -13,4 +13,4 @@ ENTRYPOINT node src/cli --elasticsearch.url="http://$ELASTIC_SEARCH:9200"
 
 To remove dependencies used for building bundles, some changes are made.
 
-- [x] `src/server/kbn_server.js`: remove Optimize plugin to disable webpack.
+- [x] `src/server/kbn_server.js`: remove Optimize plugin to disable webpack. Comment out https://github.com/elastic/kibana/blob/v6.5.0/src/optimize/base_optimizer.js dependency.
