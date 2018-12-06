@@ -16,7 +16,7 @@ var _operators = require('rxjs/operators');
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-const PUBLIC_PATH_PLACEHOLDER = exports.PUBLIC_PATH_PLACEHOLDER = '__REPLACE_WITH_PUBLIC_PATH__'; /*
+const PUBLIC_PATH_PLACEHOLDER = exports.PUBLIC_PATH_PLACEHOLDER = ''; /*
                                                                                                    * Licensed to Elasticsearch B.V. under one or more contributor
                                                                                                    * license agreements. See the NOTICE file distributed with
                                                                                                    * this work for additional information regarding copyright

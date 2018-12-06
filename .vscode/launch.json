@@ -9,7 +9,10 @@
       "request": "launch",
       "name": "Launch Program",
       "program": "${workspaceFolder}/src/cli/index.js",
-      "args": ["--verbose"],
+      "args": ["-e", "$EL"],
+      "env": {
+        "NODE_ENV": "production"
+      },
       "skipFiles": [
         "<node_internals>/**/*.js"
       ],
