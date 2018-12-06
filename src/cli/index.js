@@ -21,13 +21,50 @@
 
 require('./cli');
 const idioCore = require('@idio/core')
-const proxy = require('koa-proxy');
+const proxy = require('koa-proxy')
 
-(async () => {
+const PROD = process.env.NODE_ENV != 'production'
+
+;(async () => {
   const port = process.env.PORT || 5000
-  const { app, url } = await idioCore({}, { port })
-  console.log('Proxy started on %s', url)
+  const { router, app, url, middleware: { static: Static } } = await idioCore({
+    // logger: { use: PROD },
+    session: {
+      use: true,
+      keys: [process.env.SESSION_KEY || 'local-key'],
+    },
+    static: {
+      root: 'static',
+      mount: '/auth',
+    },
+    async checkSession(ctx, next) {
+      if (!PROD || ctx.path.startsWith('/auth')) await next()
+      else if (!ctx.session.user)
+        ctx.redirect('/auth/index.htm')
+      else await next()
+    },
+  }, { port })
+  router.get('/auth', async (ctx, next) => {
+    if (!process.env.PASSWORD) {
+      ctx.status = 500
+      ctx.body = 'The PASSWORD environment variable not set on the container.'
+      return
+    }
+    if (ctx.query.password != process.env.PASSWORD) {
+      ctx.status = 500
+      ctx.body = 'Wrong password'
+      return
+    }
+    ctx.session.user = ctx.query.login
+    ctx.redirect('/')
+    await next()
+  })
+  app.use(router.routes())
+  app.use(Static)
   app.use(proxy({
     host: 'http://localhost:5601',
+    match: /^(?!\/auth)/,
+    jar: true,
   }))
+  console.log('Proxy started on %s', url)
 })()
