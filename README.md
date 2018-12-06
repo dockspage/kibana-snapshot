@@ -8,7 +8,14 @@ This Kibana is a stripped-down version of OSS version of Kibana downloaded as a 
 293 all modules
 ```
 
+```
+docker.elastic.co/kibana/kibana-oss:6.5.0 498MB
+artdeco/kibana:6.5.0 289MB
+```
+
 The server will run on port 5000 so that it can be installed easily with Dokku. The `ELASTIC_SEARCH` and `PASSWORD` environment variables need to be set on the container.
+
+![demo.gif](doc/demo.gif)
 
 ```docker
 FROM artdeco/kibana
