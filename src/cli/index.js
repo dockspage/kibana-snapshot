@@ -64,7 +64,6 @@ const PROD = process.env.NODE_ENV != 'production'
   app.use(proxy({
     host: 'http://localhost:5601',
     match: /^(?!\/auth)/,
-    jar: true,
   }))
   console.log('Proxy started on %s', url)
 })()
