@@ -25,7 +25,8 @@ server.host: "0"
 #server.name: "your-hostname"
 
 # The URL of the Elasticsearch instance to use for all your queries.
-elasticsearch.url: "http://13.81.242.64:9200"
+# This Is Configured Using Src/Cli --Elasticsearch Flag
+elasticsearch.url: "https://logs.docks.page"
 
 # When this setting's value is true Kibana uses the hostname specified in the server.host
 # setting. When the value of this setting is false, Kibana uses the hostname of the host
